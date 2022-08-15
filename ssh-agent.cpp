@@ -9,3 +9,26 @@ SSHAgent::SSHAgent(){
 SSHAgent::~SSHAgent(){
     std::cout<<"cleaning socket and cleaning SSH Agent"<<std::endl;
 }
+
+
+void SSHAgent::createSocket(){
+    
+    int ack = 1;
+    
+    struct sockaddr_un  socketAddr;
+    int socketFD = socket(AF_UNIX, SOCK_STREAM, 0);
+
+    if(socketFD < 1){
+        ack = 0;
+        std::cout<<"socket not created."<<std::endl;
+    }
+
+
+    if(ack){
+        bzero( (char *)&socketAddr, sizeof(socketAddr) );
+        socketAddr.sun_family = AF_UNIX;
+        strcpy( socketAddr.sun_path , CLIENT_SOCKET);
+        // unlink(CLIENT_SOCKET);
+
+    }
+}

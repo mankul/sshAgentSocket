@@ -1,0 +1,15 @@
+*.out
+*.out*
+*.o
+*.sock
+*.log
+.vscode*
+.vscode/configurationCache.log
+.vscode/targets.log
+*.sock
+*.gch
+connectAgent
+a.out.dSYM
+.vscode
+.vscode/targets.log
+*/targets.log
