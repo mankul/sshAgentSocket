@@ -14,6 +14,8 @@ class SSHAgent{
     SSHAgent();
     ~SSHAgent();
     void createSocket();
+    void killSocket();
+    int socketFD;
 };
 
 

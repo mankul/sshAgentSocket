@@ -9,6 +9,14 @@ class OpenSSHKey{
 		SSHKey * publicKey;
 		SSHKey * privateKey;
 
+		OpenSSHKey(); // Constructor
+		~OpenSSHKey();
+
+		SSHKey * loadRSAPublicKey();
+		SSHKey * loacRSAPrivateKey();
+
+		SSHKey * storeRSAPublicKey();
+		SSHKey * storeRSAPrivateKey();
 
 };
 
