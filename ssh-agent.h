@@ -6,7 +6,7 @@
 #include<sys/un.h>
 #include<sys/socket.h>
 
-#define CLIENT_SOCKET "ClientSocket.sock"
+#define ENPASS_SSH_AGENT "enpassSshAgent.sock"
 
 class SSHAgent{
     public:
@@ -15,6 +15,7 @@ class SSHAgent{
     ~SSHAgent();
     void createSocket();
     void killSocket();
+    int32 convertStreamToInt(char * stream);
     int socketFD;
 };
 
