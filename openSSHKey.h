@@ -9,6 +9,9 @@ class OpenSSHKey{
 		SSHKey * publicKey;
 		SSHKey * privateKey;
 
+	OpenSSHKey();
+	~OpenSSHKey();
+	
 
 };
 

@@ -30,5 +30,15 @@ void SSHAgent::createSocket(){
         strcpy( socketAddr.sun_path , CLIENT_SOCKET);
         // unlink(CLIENT_SOCKET);
 
+        if( bind(socketFD, (struct sockaddr *)&socketAddr, sizeof(socketAddr) ) < 0){
+            ack = 0;
+            std::cout<<"could not bind to socket address"<<std::endl;
+        }
+
+
     }
+    if(ack){
+        
+    }
+
 }
